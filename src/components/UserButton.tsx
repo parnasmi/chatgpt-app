@@ -15,7 +15,7 @@ function getFirstTwoCapitalLetters(str?: string | null) {
   return match ? match.slice(0, 2).join("") : "GT";
 }
 
-export default function UserButton() {
+export function UserButton() {
   const { data: session, status } = useSession();
 
   return (
