@@ -2,11 +2,9 @@ import { Chat } from "@/components/Chat";
 import { Separator } from "@/components/ui/separator";
 import { getServerSession } from "next-auth";
 
-getServerSession;
-
 export default async function Home() {
   const session = await getServerSession();
-  console.log("session", session);
+
   return (
     <main className="p-5">
       <h1 className="text-4xl font-bold">Welcome To GPT Chat!</h1>
