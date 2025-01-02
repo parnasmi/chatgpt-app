@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 
 export default async function Home() {
   const session = await getServerSession();
-
+  console.log("process.env", process.env);
   return (
     <main className="p-5">
       <h1 className="text-4xl font-bold">Welcome To GPT Chat!</h1>
