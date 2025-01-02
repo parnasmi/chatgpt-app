@@ -5,6 +5,8 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+console.log("open ai key", process.env.OPENAI_API_KEY);
+
 type MessageHistoryItem = {
   role: "user" | "assistant";
   content: string;
