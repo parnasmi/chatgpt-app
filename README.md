@@ -14,6 +14,9 @@ pnpm dev
 bun dev
 ```
 
+Prod Dashboard - [https://vercel.com/parnasmis-projects/chatgpt-app](https://vercel.com/parnasmis-projects/chatgpt-app)
+Prod URL - [https://chatgpt-app-sand.vercel.app/](https://chatgpt-app-sand.vercel.app/)
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
