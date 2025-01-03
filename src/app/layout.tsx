@@ -25,8 +25,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("SessionProvider", SessionProvider);
-
   return (
     <SessionProvider>
       <html lang="en">
