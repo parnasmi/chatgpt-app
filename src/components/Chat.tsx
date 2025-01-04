@@ -19,7 +19,7 @@ interface Props {
 export function Chat({ id = null, messages: initialMessages = [] }: Props) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [message, setMessage] = useState("");
-  const chatId = useRef<number | null>(null);
+  const chatId = useRef<number | null>(id);
 
   const router = useRouter();
 

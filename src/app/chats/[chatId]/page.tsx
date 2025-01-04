@@ -5,8 +5,10 @@ import { redirect, notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
+type TParams = Promise<{ chatId: string[] }>;
+
 interface Props {
-  params: { chatId: string };
+  params: TParams;
 }
 
 export default async function ChatDetail({ params }: Props) {
@@ -19,13 +21,13 @@ export default async function ChatDetail({ params }: Props) {
     return notFound();
   }
 
-  if (!session || session.user.email !== chat.user_email) {
+  if (!session || (session && session?.user?.email) !== chat.user_email) {
     return redirect("/");
   }
 
   return (
     <main className="pt-5">
-      <Chat id={+chatId} key={chatId} messages={chat?.messages || []} />
+      <Chat id={+chatId} key={+chatId} messages={chat?.messages || []} />
     </main>
   );
 }
