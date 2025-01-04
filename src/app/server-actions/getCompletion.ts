@@ -36,7 +36,7 @@ export async function getCompletion(
   let chatId = id;
   if (!chatId) {
     chatId = await createChat(
-      session?.user?.email,
+      session?.user?.email || "",
       messageHistory[0].content,
       messages
     );

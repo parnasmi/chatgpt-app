@@ -3,7 +3,7 @@ import { sql } from "@vercel/postgres";
 import type { Chat, ChatWithMessages, Message } from "../types";
 
 export async function createChat(
-  userEmail: string,
+  userEmail = "",
   name: string,
   msgs: Message[]
 ) {
