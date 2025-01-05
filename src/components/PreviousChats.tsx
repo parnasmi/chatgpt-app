@@ -6,9 +6,7 @@ import Link from "next/link";
 
 export async function PreviousChats() {
   const session = await getServerSession();
-  const chats = await getChatsWithMessages(session?.user?.email!);
-
-  console.log("chats", chats);
+  const chats = await getChatsWithMessages(session?.user?.email || "");
 
   return (
     <div>
