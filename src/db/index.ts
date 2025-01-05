@@ -48,6 +48,10 @@ export async function getChats(userEmail: string): Promise<Chat[]> {
 export async function getChatsWithMessages(
   userEmail: string
 ): Promise<ChatWithMessages[]> {
+  if (!userEmail) {
+    return [];
+  }
+
   const { rows: chats } =
     await sql`SELECT * FROM chats WHERE user_email = ${userEmail} ORDER BY timestamp DESC LIMIT 3`;
 
